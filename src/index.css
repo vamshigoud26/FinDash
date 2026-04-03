@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 14% 94%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 14% 94%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 47% 11%;
+
+    --radius: 0.75rem;
+
+    /* Finance-specific tokens */
+    --income: 152 69% 41%;
+    --income-foreground: 0 0% 100%;
+    --income-muted: 152 60% 95%;
+    --expense: 0 72% 51%;
+    --expense-foreground: 0 0% 100%;
+    --expense-muted: 0 60% 96%;
+    --chart-1: 222 47% 11%;
+    --chart-2: 152 69% 41%;
+    --chart-3: 0 72% 51%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 262 52% 47%;
+    --chart-6: 199 89% 48%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 207 20% 11%;
+    --foreground: 210 45% 95%;
+
+    --card: 210 20% 15%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 210 20% 15%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary:  192 100% 52%;
+    --primary-foreground: 220 15% 95%;
+
+    --secondary: 210 24% 20%;
+    --secondary-foreground: 210 24% 95%;
+
+    --muted: 210 24% 20%;
+    --muted-foreground: 210 24% 72%;
+
+    --accent: 200 20% 20%;
+    --accent-foreground: 210 24% 95%;
+
+    --destructive: 358 79% 61%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 24% 28%;
+    --input: 210 24% 20%;
+    --ring: 192 100% 52%;
+
+    --sidebar-background: 210 24% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 204 86% 43%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 24% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 24% 28%;
+    --sidebar-ring: 192 100% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-200 ease-out;
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -5px hsl(var(--foreground) / 0.08);
+  }
+}
